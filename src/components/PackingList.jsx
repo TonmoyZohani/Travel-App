@@ -12,7 +12,7 @@ const PackingList = () => {
     <div className="list">
       <div style={{ display: "flex", gap: "30px" }}>
         {initialItems.map((item) => (
-          <Item item={item} />
+          <Item key={item.id} item={item} />
         ))}
       </div>
     </div>
