@@ -8,7 +8,6 @@ function App() {
   const [items, setItems] = useState([]);
 
   const handleAddItems = (item) => {
-    console.log(item);
     setItems((items) => [...items, item]);
     console.log(items);
   };
@@ -17,7 +16,7 @@ function App() {
     <>
       <Logo />
       <Form items={items} handleAddItems={handleAddItems} />
-      <PackingList />
+      <PackingList items={items} />
       <Stats />
     </>
   );
