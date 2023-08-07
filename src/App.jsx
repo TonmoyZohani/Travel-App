@@ -12,7 +12,9 @@ function App() {
     console.log(items);
   };
 
-  const handleDeleteItem 
+  const handleDeleteItem =(item)=>{
+    
+  }
 
   return (
     <>
