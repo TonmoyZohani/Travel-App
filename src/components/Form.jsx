@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const Form = () => {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
+  const [items, setItems] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,6 +18,10 @@ const Form = () => {
     };
 
     console.log(newItem);
+
+    // setItems([...items, newItem]);  // it's wrong
+    setItems((items) => [...items, newItem]); // it's ok
+    console.log(items);
 
     setDescription("");
     setQuantity(1);
