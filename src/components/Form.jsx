@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 
-const Form = ({ handleAddItems }) => {
-
-
+const Form = ({ handleAddItems}) => {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
 
