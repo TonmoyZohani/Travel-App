@@ -12,6 +12,8 @@ function App() {
     console.log(items);
   };
 
+  const handleDeleteItem 
+
   return (
     <>
       <Logo />
