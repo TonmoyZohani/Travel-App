@@ -10,7 +10,7 @@ const Item = ({ item, handleDeleteItem, handleToggle }) => {
         value={item.checked}
         onClick={() => handleToggle(item.id)}
       />
-      <span style={!item.packed ? { textDecoration: "line-through" } : {}}>
+      <span style={item.packed ? { textDecoration: "line-through" } : {}}>
         {item.quantity} {item.description}
       </span>
       <button onClick={() => handleDeleteItem(item.id)}>❌</button>

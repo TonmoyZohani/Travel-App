@@ -13,7 +13,7 @@ const Form = ({ handleAddItems}) => {
       id: Date.now(),
       description: description,
       quantity: quantity,
-      packed: "false",
+      packed: false,
     };
 
     handleAddItems(newItem);
