@@ -22,11 +22,28 @@ function App() {
     console.log(items);
   };
 
+  const handleToggle = (id) => {
+    const newItems = items.map((item) =>
+      item.id === id
+        ? {
+            ...item,
+            packed: !item.packed,
+          }
+        : item
+    );
+
+    setItems(newItems);
+  };
+
   return (
     <>
       <Logo />
       <Form items={items} handleAddItems={handleAddItems} />
-      <PackingList items={items} handleDeleteItem={handleDeleteItem} />
+      <PackingList
+        items={items}
+        handleDeleteItem={handleDeleteItem}
+        handleToggle={handleToggle}
+      />
       <Stats />
     </>
   );
