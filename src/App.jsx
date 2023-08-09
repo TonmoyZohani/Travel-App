@@ -23,10 +23,13 @@ function App() {
   };
 
   const handleClear = () => {
+    const confirmed = window.confirm(
+      "Are you sure you want to delete the items"
+    );
 
-    const confirmed = window.confirm("Are yo")
-
-    setItems([]);
+    if (confirmed) {
+      setItems([]);
+    }
   };
 
   const handleToggle = (id) => {
