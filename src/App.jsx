@@ -22,6 +22,13 @@ function App() {
     console.log(items);
   };
 
+  const handleClear = () => {
+
+    const confirmed = window.confirm("Are yo")
+
+    setItems([]);
+  };
+
   const handleToggle = (id) => {
     const newItems = items.map((item) =>
       item.id === id
@@ -43,6 +50,7 @@ function App() {
         items={items}
         handleDeleteItem={handleDeleteItem}
         handleToggle={handleToggle}
+        handleClear={handleClear}
       />
       <Stats items={items} />
     </>

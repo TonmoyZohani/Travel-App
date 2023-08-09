@@ -7,13 +7,18 @@ const initialItems = [
   { id: 3, description: "Shirts", quantity: 6, packed: true },
 ];
 
-const PackingList = ({ items, handleDeleteItem, handleToggle }) => {
+const PackingList = ({
+  items,
+  handleDeleteItem,
+  handleToggle,
+  handleClear,
+}) => {
   const [sortBy, setSortBy] = useState("input");
 
   let sortedItems;
 
   if (sortBy === "input") {
-    sortedItems = items;     // normally sorted
+    sortedItems = items; // normally sorted
   }
 
   if (sortBy === "description") {
@@ -47,6 +52,8 @@ const PackingList = ({ items, handleDeleteItem, handleToggle }) => {
           <option value="description">Sort By Description</option>
           <option value="status">Sort By Packed Status</option>
         </select>
+
+        <button onClick={handleClear}>Clear List</button>
       </div>
     </div>
   );
